@@ -1,0 +1,7 @@
++----------------------+---------------------------------------------------------------------------------+
+| Availability_Domain  | Tenancy_ID                                                                      |
++----------------------+---------------------------------------------------------------------------------+
+| QHNs:US-ASHBURN-AD-1 | ocid1.tenancy.oc1..aaaaaaaacr2kimui4s25ck7zeyjrqvfc3bpyjlr73hjrydgukzwcwqctbqra |
+| QHNs:US-ASHBURN-AD-2 | ocid1.tenancy.oc1..aaaaaaaacr2kimui4s25ck7zeyjrqvfc3bpyjlr73hjrydgukzwcwqctbqra |
+| QHNs:US-ASHBURN-AD-3 | ocid1.tenancy.oc1..aaaaaaaacr2kimui4s25ck7zeyjrqvfc3bpyjlr73hjrydgukzwcwqctbqra |
++----------------------+---------------------------------------------------------------------------------+
