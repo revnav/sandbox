@@ -1,0 +1,99 @@
+---
+- hosts: EBS
+  gather_facts: yes
+  become: yes
+  become_user: root
+  ignore_errors: no
+  tasks:
+   - name: Stop Firewalld
+     service: name=firewalld state=stopped enabled=no
+
+   - name: Install EBS Packages
+     yum:
+       name: "{{ packages }}"
+     vars:
+       packages:
+       - oracle-ebs-server-R12-preinstall
+       - cifs-utils
+
+   - name: Install Supporting Packages-1
+     yum:
+       name: "{{ packages }}"
+     vars:
+       packages:
+       - samba
+       - samba-libs
+       - samba-winbind
+       - samba-winbind-modules
+       - samba-common-tools
+       - samba-client-libs
+       - samba-client
+
+   - name: Install Supporting Packages-2
+     yum:
+       name: "{{ packages }}"
+     vars:
+       packages:
+       - libsmbclient
+       - libarchive
+       - screen
+       - telnet
+
+   - name: Fix oinstall
+     shell:
+        sudo groupmod -g 1001 oinstall
+   - name: Fix dba
+     shell:
+        sudo groupmod -g 1002 dba
+   - name: Fix applmgr
+     shell:
+        sudo usermod -u 501 applmgr
+   - name: Fix oracle
+     shell:
+        sudo usermod -u 1001 oracle
+
+   - name: Copy file
+     copy:
+      src: cent_iscsi.sh
+      dest: /usr/bin
+   - name: Copy file2
+     copy:
+      src: partdisk.sh
+      dest: /tmp
+   - name: Fix oracle
+     shell:
+        chmod 700 /usr/bin/cent_iscsi.sh
+   - name: Fix oracle
+     shell:
+        sudo sh /usr/bin/cent_iscsi.sh
+   - name: Fix oracle
+     shell:
+        chmod 700 /tmp/partdisk.sh
+   - name: Fix oracle
+     shell:
+        sudo sh /tmp/partdisk.sh
+   - name: Fix oracle
+     shell:
+        sudo rm /tmp/partdisk.sh
+   - name: Mount1
+     shell:
+        sudo mkdir /u01
+   - name: Mount1
+     shell:
+        sudo mkfs -t ext4 /dev/sdb1
+   - name: Mount1
+     shell:
+        sudo rm /etc/localtime
+   - name: Mount1
+     shell:
+        sudo ln -s /usr/share/zoneinfo/America/Chicago /etc/localtime
+   - name: Mount1
+     shell:
+        sudo  blkid | grep sdb1| awk '{print  $2 " /u01    ext4       defaults,noatime,_netdev,nofail      0      2"}' >> /etc/fstab
+   - name: Mount1
+     shell:
+        sudo  chown applmgr:dba /u01
+   - name: Mount1
+     shell:
+        sudo  mount /u01
+

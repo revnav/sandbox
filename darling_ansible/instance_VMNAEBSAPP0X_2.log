@@ -1,0 +1,210 @@
+
+PLAY [Launch a compute instance and connect to it using SSH] ************************************************************************************************************************************
+
+TASK [Gathering Facts] **************************************************************************************************************************************************************************
+ok: [localhost]
+
+TASK [Launch a Compute Instance] ****************************************************************************************************************************************************************
+changed: [localhost]
+
+TASK [Print instance details] *******************************************************************************************************************************************************************
+ok: [localhost] => {
+    "msg": {
+        "changed": true,
+        "failed": false,
+        "instance": {
+            "agent_config": {
+                "is_management_disabled": false,
+                "is_monitoring_disabled": false
+            },
+            "availability_domain": "IAYy:US-ASHBURN-AD-1",
+            "compartment_id": "ocid1.compartment.oc1..aaaaaaaaz47gkjeeepx3mjcweydp2oogtskr7e5ktbt65snel5sxopcuw74a",
+            "dedicated_vm_host_id": null,
+            "defined_tags": {},
+            "display_name": "VMNAEBSAPP0X",
+            "extended_metadata": {},
+            "fault_domain": "FAULT-DOMAIN-1",
+            "freeform_tags": {},
+            "id": "ocid1.instance.oc1.iad.anuwcljtfk76j3ycjrxq2gkhbohggllvmxgrqwcwa7sukvih76s6hzl7pgjq",
+            "image_id": "ocid1.image.oc1.iad.aaaaaaaahjkmmew2pjrcpylaf6zdddtom6xjnazwptervti35keqd4fdylca",
+            "ipxe_script": null,
+            "launch_mode": "NATIVE",
+            "launch_options": {
+                "boot_volume_type": "PARAVIRTUALIZED",
+                "firmware": "UEFI_64",
+                "is_consistent_volume_naming_enabled": true,
+                "is_pv_encryption_in_transit_enabled": false,
+                "network_type": "PARAVIRTUALIZED",
+                "remote_data_volume_type": "PARAVIRTUALIZED"
+            },
+            "lifecycle_state": "RUNNING",
+            "metadata": {
+                "ssh_authorized_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDIzAfkzhONyZaOAKx9CkCbdQhgHRMUtv8vX5jhE1WR3XfeUxHf/mNchkFGxrUzsMDBIF7aIuGrPqN6a1zs1cGcWryKWgCRe2vogRyXcSzUqGUOxSvBNS6QHPrPVzxf1yK0FfL6qggpATQPDakDB0njMqcafxs7loLWZ1mJClpf4YD1Uy9IttSpL4A3NS3t9FbcZ2wP3GPTQcHt2w2S8rk0anK6w/fMEn0T7MagFxAeDb5yI/+V4K8FeEy71/VGaQQ1MYLKqZbZTa2SXQB5VKiysIL5iYFJk6/va+bI6Udze1Rw7XM6bhmImDoHNNg9tPzxbgVuRYS+4633+yNh2Cl5 ansible@ansible\nssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDWuI7J+VPzgFgsVkFZ4iL3n8/cZFVkhVnomsKLZ9CvD0WEbLGcyp7Vr3NMosuK7dNuENBo1Ics0vEwlDh9rOx63tl8ygutikvyaPEPzfyR7p+XMSKZ/M4iAzpyhMR9aLHfrOVLhtGh9nFP40njtqKpFYywBubITJvKioW7yz5yNf5myrpmVFMvx9cAgtGNcGJqVhCWYkO8swOdZy3MUJjwW9NyA49sBfPoHQOMF/rzqjsz/MO99Dlv1xy31KQRX3BhLKxMHWvFHTBK5+JjJStqDbBtabqTGZlTEPf9oKv1jDbuKHCNeOP67hN1nUm2zwZ/50Mjs2HyoOBHH9a9SR31 sid@centroid"
+            },
+            "primary_private_ip": "10.96.32.40",
+            "primary_public_ip": null,
+            "region": "iad",
+            "shape": "VM.Standard2.1",
+            "shape_config": {
+                "gpu_description": null,
+                "gpus": 0,
+                "local_disk_description": null,
+                "local_disks": 0,
+                "local_disks_total_size_in_gbs": null,
+                "max_vnic_attachments": 2,
+                "memory_in_gbs": 15.0,
+                "networking_bandwidth_in_gbps": 1.0,
+                "ocpus": 1.0,
+                "processor_description": "2.0 GHz Intel® Xeon® Platinum 8167M (Skylake)"
+            },
+            "source_details": {
+                "boot_volume_size_in_gbs": null,
+                "image_id": "ocid1.image.oc1.iad.aaaaaaaahjkmmew2pjrcpylaf6zdddtom6xjnazwptervti35keqd4fdylca",
+                "kms_key_id": null,
+                "source_type": "image"
+            },
+            "system_tags": {},
+            "time_created": "2020-05-31T14:08:22.970000+00:00",
+            "time_maintenance_reboot_due": null
+        },
+        "instances": [
+            {
+                "agent_config": {
+                    "is_management_disabled": false,
+                    "is_monitoring_disabled": false
+                },
+                "availability_domain": "IAYy:US-ASHBURN-AD-1",
+                "compartment_id": "ocid1.compartment.oc1..aaaaaaaaz47gkjeeepx3mjcweydp2oogtskr7e5ktbt65snel5sxopcuw74a",
+                "dedicated_vm_host_id": null,
+                "defined_tags": {},
+                "display_name": "VMNAEBSAPP0X",
+                "extended_metadata": {},
+                "fault_domain": "FAULT-DOMAIN-1",
+                "freeform_tags": {},
+                "id": "ocid1.instance.oc1.iad.anuwcljtfk76j3ycjrxq2gkhbohggllvmxgrqwcwa7sukvih76s6hzl7pgjq",
+                "image_id": "ocid1.image.oc1.iad.aaaaaaaahjkmmew2pjrcpylaf6zdddtom6xjnazwptervti35keqd4fdylca",
+                "ipxe_script": null,
+                "launch_mode": "NATIVE",
+                "launch_options": {
+                    "boot_volume_type": "PARAVIRTUALIZED",
+                    "firmware": "UEFI_64",
+                    "is_consistent_volume_naming_enabled": true,
+                    "is_pv_encryption_in_transit_enabled": false,
+                    "network_type": "PARAVIRTUALIZED",
+                    "remote_data_volume_type": "PARAVIRTUALIZED"
+                },
+                "lifecycle_state": "RUNNING",
+                "metadata": {
+                    "ssh_authorized_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDIzAfkzhONyZaOAKx9CkCbdQhgHRMUtv8vX5jhE1WR3XfeUxHf/mNchkFGxrUzsMDBIF7aIuGrPqN6a1zs1cGcWryKWgCRe2vogRyXcSzUqGUOxSvBNS6QHPrPVzxf1yK0FfL6qggpATQPDakDB0njMqcafxs7loLWZ1mJClpf4YD1Uy9IttSpL4A3NS3t9FbcZ2wP3GPTQcHt2w2S8rk0anK6w/fMEn0T7MagFxAeDb5yI/+V4K8FeEy71/VGaQQ1MYLKqZbZTa2SXQB5VKiysIL5iYFJk6/va+bI6Udze1Rw7XM6bhmImDoHNNg9tPzxbgVuRYS+4633+yNh2Cl5 ansible@ansible\nssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDWuI7J+VPzgFgsVkFZ4iL3n8/cZFVkhVnomsKLZ9CvD0WEbLGcyp7Vr3NMosuK7dNuENBo1Ics0vEwlDh9rOx63tl8ygutikvyaPEPzfyR7p+XMSKZ/M4iAzpyhMR9aLHfrOVLhtGh9nFP40njtqKpFYywBubITJvKioW7yz5yNf5myrpmVFMvx9cAgtGNcGJqVhCWYkO8swOdZy3MUJjwW9NyA49sBfPoHQOMF/rzqjsz/MO99Dlv1xy31KQRX3BhLKxMHWvFHTBK5+JjJStqDbBtabqTGZlTEPf9oKv1jDbuKHCNeOP67hN1nUm2zwZ/50Mjs2HyoOBHH9a9SR31 sid@centroid"
+                },
+                "primary_private_ip": "10.96.32.40",
+                "primary_public_ip": null,
+                "region": "iad",
+                "shape": "VM.Standard2.1",
+                "shape_config": {
+                    "gpu_description": null,
+                    "gpus": 0,
+                    "local_disk_description": null,
+                    "local_disks": 0,
+                    "local_disks_total_size_in_gbs": null,
+                    "max_vnic_attachments": 2,
+                    "memory_in_gbs": 15.0,
+                    "networking_bandwidth_in_gbps": 1.0,
+                    "ocpus": 1.0,
+                    "processor_description": "2.0 GHz Intel® Xeon® Platinum 8167M (Skylake)"
+                },
+                "source_details": {
+                    "boot_volume_size_in_gbs": null,
+                    "image_id": "ocid1.image.oc1.iad.aaaaaaaahjkmmew2pjrcpylaf6zdddtom6xjnazwptervti35keqd4fdylca",
+                    "kms_key_id": null,
+                    "source_type": "image"
+                },
+                "system_tags": {},
+                "time_created": "2020-05-31T14:08:22.970000+00:00",
+                "time_maintenance_reboot_due": null
+            }
+        ]
+    }
+}
+
+TASK [set_fact] *********************************************************************************************************************************************************************************
+ok: [localhost]
+
+TASK [Create a new block volume] ****************************************************************************************************************************************************************
+changed: [localhost]
+
+TASK [Print BV details] *************************************************************************************************************************************************************************
+ok: [localhost] => {
+    "msg": {
+        "changed": true,
+        "failed": false,
+        "volume": {
+            "availability_domain": "IAYy:US-ASHBURN-AD-1",
+            "compartment_id": "ocid1.compartment.oc1..aaaaaaaaz47gkjeeepx3mjcweydp2oogtskr7e5ktbt65snel5sxopcuw74a",
+            "defined_tags": {},
+            "display_name": "VMNAEBSAPP0X_u01",
+            "freeform_tags": {},
+            "id": "ocid1.volume.oc1.iad.abuwcljtpr2jky66trtqx2h4i4ezrau37svc3risy5cwrkxwezrm5p3nmn4a",
+            "is_hydrated": true,
+            "kms_key_id": null,
+            "lifecycle_state": "AVAILABLE",
+            "size_in_gbs": 200,
+            "size_in_mbs": 204800,
+            "source_details": null,
+            "system_tags": {},
+            "time_created": "2020-05-31T14:09:57.614000+00:00",
+            "volume_group_id": null,
+            "vpus_per_gb": 10
+        }
+    }
+}
+
+TASK [set_fact] *********************************************************************************************************************************************************************************
+ok: [localhost]
+
+TASK [Attach a volume to an instance] ***********************************************************************************************************************************************************
+changed: [localhost]
+
+TASK [Print Attach BV details] ******************************************************************************************************************************************************************
+ok: [localhost] => {
+    "msg": {
+        "changed": true,
+        "failed": false,
+        "volume_attachment": {
+            "attachment_type": "iscsi",
+            "availability_domain": "IAYy:US-ASHBURN-AD-1",
+            "chap_secret": null,
+            "chap_username": null,
+            "compartment_id": "ocid1.compartment.oc1..aaaaaaaaz47gkjeeepx3mjcweydp2oogtskr7e5ktbt65snel5sxopcuw74a",
+            "device": null,
+            "display_name": "volumeattachment20200531141014",
+            "id": "ocid1.volumeattachment.oc1.iad.anuwcljtfk76j3yc44hj4lcbp66xs2dywy6jbnjvzdqtyvycxaxfkqhj6ckq",
+            "instance_id": "ocid1.instance.oc1.iad.anuwcljtfk76j3ycjrxq2gkhbohggllvmxgrqwcwa7sukvih76s6hzl7pgjq",
+            "ipv4": "169.254.2.2",
+            "iqn": "iqn.2015-12.com.oracleiaas:dadc66dc-5da5-4dca-8899-5352a9e3a17f",
+            "is_pv_encryption_in_transit_enabled": false,
+            "is_read_only": false,
+            "is_shareable": false,
+            "iscsi_attach_commands": [
+                "sudo iscsiadm -m node -o new -T iqn.2015-12.com.oracleiaas:dadc66dc-5da5-4dca-8899-5352a9e3a17f -p 169.254.2.2:3260",
+                "sudo iscsiadm -m node -o update -T iqn.2015-12.com.oracleiaas:dadc66dc-5da5-4dca-8899-5352a9e3a17f -n node.startup -v automatic",
+                "sudo iscsiadm -m node -T iqn.2015-12.com.oracleiaas:dadc66dc-5da5-4dca-8899-5352a9e3a17f -p 169.254.2.2:3260 -l"
+            ],
+            "iscsi_detach_commands": [
+                "sudo iscsiadm -m node -T iqn.2015-12.com.oracleiaas:dadc66dc-5da5-4dca-8899-5352a9e3a17f -p 169.254.2.2:3260 -u",
+                "sudo iscsiadm -m node -o delete -T iqn.2015-12.com.oracleiaas:dadc66dc-5da5-4dca-8899-5352a9e3a17f"
+            ],
+            "lifecycle_state": "ATTACHED",
+            "port": 3260,
+            "time_created": "2020-05-31T14:10:15.036000+00:00",
+            "volume_id": "ocid1.volume.oc1.iad.abuwcljtpr2jky66trtqx2h4i4ezrau37svc3risy5cwrkxwezrm5p3nmn4a"
+        }
+    }
+}
+
+TASK [set_fact] *********************************************************************************************************************************************************************************
+ok: [localhost]
+
+PLAY RECAP **************************************************************************************************************************************************************************************
+localhost                  : ok=10   changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

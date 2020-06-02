@@ -1,0 +1,72 @@
+---
+# Create Instance in OCI
+
+- name: Launch a compute instance and connect to it using SSH
+  hosts: localhost
+  vars:
+    instance_subnet_id: "{{ lookup('env', 'SUBNET_OCID') }}"
+    instance_shape: "{{ lookup('env', 'INSTANCE_SHAPE') | default('VM.Standard2.1', true) }}"
+    instance_hostname: DVMNATEST01 
+    #instance_hostname: "{{ lookup('env', 'HOSTNAME') }}"
+    instance_ad: "{{ lookup('env', 'INSTANCE_AD') }}"
+    instance_compartment: "{{ lookup('env', 'COMPARTMENT_OCID') }}"
+    instance_image: "{{ lookup('env', 'INSTANCE_IMAGE') }}"
+    #volume_name: VMNAEBSAPP01_u01
+    volume_name: "{{ lookup('env', 'VOLUME_NAME') }}"
+    volume_size: "{{ lookup('env', 'VOLUME_SIZE') }}"
+    private_ip_add: "{{ lookup('env', 'PRIVATE_IP') }}"
+
+  tasks:
+    - name: Launch a Compute Instance
+      oci_instance:
+        #name: VMNAEBSAPP01
+        name:  "{{ instance_hostname }}"
+        availability_domain: "{{ instance_ad }}"
+        compartment_id: "{{ instance_compartment }}"
+        shape: "{{ instance_shape }}"
+        metadata:
+                ssh_authorized_keys: "{{ lookup('file', '/home/opc/build/compute/ssh_public_key' ) }}"
+        source_details:
+                source_type: image
+                image_id: "{{ instance_image }}"
+        vnic:
+            assign_public_ip: False
+            hostname_label: "{{ instance_hostname }}"
+            #private_ip: "{{ private_ip_add }}"
+            subnet_id: "{{ instance_subnet_id }}"
+      register: result
+
+    - name: Print instance details
+      debug:
+        msg: "{{ result }}"
+    - set_fact:
+        instance_id: "{{result.instance.id }}"
+
+    - name: Create a new block volume
+      oci_volume:
+        availability_domain: "{{ instance_ad }}"
+        compartment_id: "{{ instance_compartment }}"
+        name: "{{ volume_name }}"
+        size_in_gbs: "{{ volume_size }}"
+      register: result2
+
+    - name: Print BV details
+      debug:
+        msg: "{{ result2 }}"
+    - set_fact:
+        volume_id: "{{result2.volume.id }}"
+
+    - name: Attach a volume to an instance
+      oci_volume_attachment:
+        instance_id: "{{ instance_id }}"
+        type: iscsi
+        volume_id: "{{ volume_id }}"
+      register: result3
+
+    - name: Print Attach BV details
+      debug:
+        msg: "{{ result3 }}"
+    - set_fact:
+       volume_attachment_details: "{{result3.volume_attachment }}"
+
+

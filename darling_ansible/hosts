@@ -1,0 +1,3 @@
+[EBS]
+10.96.32.41      ansible_user=opc
+
