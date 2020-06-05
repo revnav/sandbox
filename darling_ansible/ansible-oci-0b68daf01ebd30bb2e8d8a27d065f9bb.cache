@@ -1,0 +1,129 @@
+{
+  "EBSRestartEnabled#EBSUAT01=app01": {
+    "hosts": [
+      "10.96.0.12"
+    ]
+  },
+  "IAYy_US-ASHBURN-AD-1": {
+    "children": [
+      "ocid1.subnet.oc1.iad.aaaaaaaauafdryn47hny27od7sueaez4bo4rwbrikdiwhb4d5nmkm3kfrbeq"
+    ],
+    "hosts": [
+      "10.96.0.12"
+    ]
+  },
+  "VM.Standard2.4": {
+    "hosts": [
+      "10.96.0.12"
+    ]
+  },
+  "_meta": {
+    "hostvars": {
+      "10.96.0.12": {
+        "agent_config": {
+          "is_management_disabled": false,
+          "is_monitoring_disabled": false
+        },
+        "availability_domain": "IAYy:US-ASHBURN-AD-1",
+        "compartment_id": "ocid1.compartment.oc1..aaaaaaaam7we2kjnr73cfbm6fd7tgaxwapf2hqgybayexv3bfb5r7ljcmhma",
+        "dedicated_vm_host_id": null,
+        "defined_tags": {
+          "EBSRestartEnabled": {
+            "EBSUAT01": "app01"
+          }
+        },
+        "display_name": "OCIEBSUATAPP01",
+        "extended_metadata": {},
+        "fault_domain": "FAULT-DOMAIN-3",
+        "freeform_tags": {},
+        "id": "ocid1.instance.oc1.iad.abuwcljtvmoqcr3alqu6iknzxrh2dciq5kj5hceyhkjv2vsbmjhoh6bytubq",
+        "image_id": "ocid1.image.oc1.iad.aaaaaaaajsnvsz4kw3tmvd7iwxffzv3h23hijs6jznm737n46imafjhqlqhq",
+        "ipxe_script": null,
+        "launch_mode": "NATIVE",
+        "launch_options": {
+          "boot_volume_type": "ISCSI",
+          "firmware": "UEFI_64",
+          "is_consistent_volume_naming_enabled": null,
+          "is_pv_encryption_in_transit_enabled": null,
+          "network_type": "VFIO",
+          "remote_data_volume_type": "ISCSI"
+        },
+        "lifecycle_state": "RUNNING",
+        "metadata": {
+          "ssh_authorized_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEA1hFnHdYhdLTBuOfkqRQ/b2hWmk5yQhNaaJawiYsL6hQx5kTJZhw1PK4//YkmbyOwNUiGABYLFVJwO4QEZJiu5v1U9fLpPR5NOFin7cEO1Yp2JEsmtyMDOQJ089tC3A5y7ZQJDVyJAo6fI1HYQEd7t7nSvAXTLKLWTqP3t63TPLW8I3fOPmIFTW01qOu9AlH7pybYm3ZmWwIE9d8MXWMMeV0rIY3fawQVq2tbOBo/3mboJ+3eEPVeGDLRNOm9D1IlkD5nNQ6Vzp0Ratm+ZAudjOhQXI/lJ3GeGodTKeonKT8YV1gYK9auE+YxMRio8vySqELi/L2S9rM24EJnWhJOjQ== rsa-key-20170206"
+        },
+        "region": "iad",
+        "shape": "VM.Standard2.4",
+        "shape_config": {
+          "gpu_description": null,
+          "gpus": 0,
+          "local_disk_description": null,
+          "local_disks": 0,
+          "local_disks_total_size_in_gbs": null,
+          "max_vnic_attachments": 4,
+          "memory_in_gbs": 60.0,
+          "networking_bandwidth_in_gbps": 4.1,
+          "ocpus": 4.0,
+          "processor_description": "2.0 GHz Intel\u00ae Xeon\u00ae Platinum 8167M (Skylake)"
+        },
+        "source_details": {
+          "boot_volume_size_in_gbs": null,
+          "image_id": "ocid1.image.oc1.iad.aaaaaaaajsnvsz4kw3tmvd7iwxffzv3h23hijs6jznm737n46imafjhqlqhq",
+          "kms_key_id": null,
+          "source_type": "image"
+        },
+        "system_tags": {},
+        "time_created": "2018-07-10T20:07:10.853000+00:00",
+        "time_maintenance_reboot_due": null
+      }
+    }
+  },
+  "all": {
+    "hosts": [
+      "10.96.0.12"
+    ],
+    "vars": {}
+  },
+  "darlingashburn": {
+    "hosts": [
+      "10.96.0.12"
+    ]
+  },
+  "ocid1.image.oc1.iad.aaaaaaaajsnvsz4kw3tmvd7iwxffzv3h23hijs6jznm737n46imafjhqlqhq": {
+    "hosts": [
+      "10.96.0.12"
+    ]
+  },
+  "ocid1.securitylist.oc1.iad.aaaaaaaaojgcxyz4oagoc7hfpufwen45yhsa4hi5dmjoata36vwfsjusv76a": {
+    "hosts": [
+      "10.96.0.12"
+    ]
+  },
+  "ocid1.securitylist.oc1.iad.aaaaaaaavlqt3za3tcp7akt6nfhr2nut2isq4b7hgbeoa7qqk5c4mex7o3ga": {
+    "hosts": [
+      "10.96.0.12"
+    ]
+  },
+  "ocid1.subnet.oc1.iad.aaaaaaaauafdryn47hny27od7sueaez4bo4rwbrikdiwhb4d5nmkm3kfrbeq": {
+    "hosts": [
+      "10.96.0.12"
+    ]
+  },
+  "ocid1.vcn.oc1.iad.aaaaaaaaipy3dshespxposuht5wklvd342epa52yw75aaixfgzuei2pkdbkq": {
+    "children": [
+      "ocid1.subnet.oc1.iad.aaaaaaaauafdryn47hny27od7sueaez4bo4rwbrikdiwhb4d5nmkm3kfrbeq"
+    ],
+    "hosts": [
+      "10.96.0.12"
+    ]
+  },
+  "region_iad": {
+    "children": [
+      "IAYy_US-ASHBURN-AD-1",
+      "ocid1.vcn.oc1.iad.aaaaaaaaipy3dshespxposuht5wklvd342epa52yw75aaixfgzuei2pkdbkq"
+    ],
+    "hosts": [
+      "10.96.0.12"
+    ]
+  }
+}
