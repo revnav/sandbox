@@ -40,3 +40,8 @@
    - name: configure Database
      shell:
        sudo sh /tmp/configuredb.sh
+
+   - name: cleanup
+     shell:
+       sudo rm -rf /tmp/download.sh /tmp/configuredb.sh
+       
