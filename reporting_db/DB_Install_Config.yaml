@@ -1,0 +1,42 @@
+---
+- hosts: all
+  gather_facts: yes
+  become: yes
+  become_user: root
+  ignore_errors: no
+  tasks:
+   - name: Stop Firewalld
+     service: name=firewalld state=stopped enabled=no
+
+   - name: Install EBS Packages
+     yum:
+       name: "{{ packages }}"
+     vars:
+       packages:
+       - oracle-database-preinstall-18c
+
+   - name: Install EBS Packages
+     yum:
+       name: "{{ packages }}"
+     vars:
+       packages:
+       - oracle-database-preinstall-18c
+
+
+   - name: Copy fie
+     copy:
+       src: download.sh
+       dest: /tmp/
+
+   - name: Copy fie
+     copy:
+       src: configuredb.sh
+       dest: /tmp/
+
+   - name: download install binary
+     shell:
+       sudo sh /tmp/download.sh
+
+   - name: configure Database
+     shell:
+       sudo sh /tmp/configuredb.sh
