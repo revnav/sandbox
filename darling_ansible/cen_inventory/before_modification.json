@@ -1,0 +1,138 @@
+{
+  "Oracle-Tags#CreatedBy=oracleidentitycloudservice_navdeep.saini_centroid.com_": {
+    "hosts": [
+      "132.145.209.234"
+    ]
+  },
+  "Oracle-Tags#CreatedOn=2020-06-11T02_32_35.578Z": {
+    "hosts": [
+      "132.145.209.234"
+    ]
+  },
+  "QHNs_US-ASHBURN-AD-1": {
+    "children": [
+      "ocid1.subnet.oc1.iad.aaaaaaaaqaoe65e5df7sjub3sonw3fj7bibrvttcebhucgwdvihfttcyfbfq"
+    ],
+    "hosts": [
+      "132.145.209.234"
+    ]
+  },
+  "VM.Standard2.1": {
+    "hosts": [
+      "132.145.209.234"
+    ]
+  },
+  "_meta": {
+    "hostvars": {
+      "132.145.209.234": {
+        "agent_config": {
+          "is_management_disabled": false,
+          "is_monitoring_disabled": false
+        },
+        "availability_domain": "QHNs:US-ASHBURN-AD-1",
+        "compartment_id": "ocid1.compartment.oc1..aaaaaaaawgol7adxtveix2axrpvxiclfbr7t5l664gdgpopgcfhp4pq2gizq",
+        "dedicated_vm_host_id": null,
+        "defined_tags": {
+          "Oracle-Tags": {
+            "CreatedBy": "oracleidentitycloudservice/navdeep.saini@centroid.com ",
+            "CreatedOn": "2020-06-11T02:32:35.578Z"
+          },
+          "costTracking": {
+            "costcenter": "centroid_reporting_tool"
+          }
+        },
+        "display_name": "ebscm",
+        "extended_metadata": {},
+        "fault_domain": "FAULT-DOMAIN-1",
+        "freeform_tags": {},
+        "id": "ocid1.instance.oc1.iad.anuwcljt6rfcedyc72zulrld4vfzxftep7bqmux4vvo2nycstxe3pevukayq",
+        "image_id": "ocid1.image.oc1..aaaaaaaavc5c67edi65ybyukvmoxctqtr35fwheubv2wtku3doodgx2v3lna",
+        "ipxe_script": null,
+        "launch_mode": "NATIVE",
+        "launch_options": {
+          "boot_volume_type": "PARAVIRTUALIZED",
+          "firmware": "UEFI_64",
+          "is_consistent_volume_naming_enabled": true,
+          "is_pv_encryption_in_transit_enabled": false,
+          "network_type": "VFIO",
+          "remote_data_volume_type": "PARAVIRTUALIZED"
+        },
+        "lifecycle_state": "RUNNING",
+        "metadata": {
+          "ssh_authorized_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCo7+nh0CK0esh5B8jvPYVTrozV/YcmkTUgi867W2pd5zHad/W1RMqcc6PC5qBAlZL9SlQ7dHYuws4Zxqp4CMt+YEZnKftkOW/oa3XER2esI04OiuVA7qcd17JuT597uOXDVVpaqxiLxUC5YSO2NoD/8filWnRFhI2ir5H2VEjs8r0tqvcPMQly2eAW9mHgLmP5dicDRnYHNuT/y6vZbJhWfuV3xZx9TquRM6i6xlCgDkdc/xWIJ1YJGwiyhJQFElP6KGQp4Ts9nyEcUTEy5hAkySPHjCS0tIGVJo9acjRlAlfmdIsQHf/gEYiyn8CMSrc+w10FudJV4xmxOWOTWRgz"
+        },
+        "region": "iad",
+        "shape": "VM.Standard2.1",
+        "shape_config": {
+          "gpu_description": null,
+          "gpus": 0,
+          "local_disk_description": null,
+          "local_disks": 0,
+          "local_disks_total_size_in_gbs": null,
+          "max_vnic_attachments": 2,
+          "memory_in_gbs": 15.0,
+          "networking_bandwidth_in_gbps": 1.0,
+          "ocpus": 1.0,
+          "processor_description": "2.0 GHz Intel\u00ae Xeon\u00ae Platinum 8167M (Skylake)"
+        },
+        "source_details": {
+          "boot_volume_size_in_gbs": null,
+          "image_id": "ocid1.image.oc1..aaaaaaaavc5c67edi65ybyukvmoxctqtr35fwheubv2wtku3doodgx2v3lna",
+          "kms_key_id": null,
+          "source_type": "image"
+        },
+        "system_tags": {},
+        "time_created": "2020-06-11T02:32:37.185000+00:00",
+        "time_maintenance_reboot_due": null
+      }
+    }
+  },
+  "all": {
+    "hosts": [
+      "132.145.209.234"
+    ],
+    "vars": {}
+  },
+  "centroid_reporting": {
+    "hosts": [
+      "132.145.209.234"
+    ]
+  },
+  "costTracking#costcenter=centroid_reporting_tool": {
+    "hosts": [
+      "132.145.209.234"
+    ]
+  },
+  "ocid1.image.oc1..aaaaaaaavc5c67edi65ybyukvmoxctqtr35fwheubv2wtku3doodgx2v3lna": {
+    "hosts": [
+      "132.145.209.234"
+    ]
+  },
+  "ocid1.securitylist.oc1.iad.aaaaaaaamwyicritklfjpryn3hsn7jngao3ezulqomd2vfhpaunoy5nbgbka": {
+    "hosts": [
+      "132.145.209.234"
+    ]
+  },
+  "ocid1.subnet.oc1.iad.aaaaaaaaqaoe65e5df7sjub3sonw3fj7bibrvttcebhucgwdvihfttcyfbfq": {
+    "hosts": [
+      "132.145.209.234"
+    ]
+  },
+  "ocid1.vcn.oc1.iad.amaaaaaa6rfcedyanxqn7zohd6tnjohkhaao6fnlr5sghwq6bpuavtidmj2a": {
+    "children": [
+      "ocid1.subnet.oc1.iad.aaaaaaaaqaoe65e5df7sjub3sonw3fj7bibrvttcebhucgwdvihfttcyfbfq"
+    ],
+    "hosts": [
+      "132.145.209.234"
+    ]
+  },
+  "region_iad": {
+    "children": [
+      "QHNs_US-ASHBURN-AD-1",
+      "ocid1.vcn.oc1.iad.amaaaaaa6rfcedyanxqn7zohd6tnjohkhaao6fnlr5sghwq6bpuavtidmj2a"
+    ],
+    "hosts": [
+      "132.145.209.234"
+    ]
+  }
+}
