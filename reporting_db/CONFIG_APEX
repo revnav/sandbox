@@ -58,8 +58,22 @@ BEGIN
   EXECUTE IMMEDIATE 'ALTER USER anonymous IDENTIFIED BY ' || l_passwd || ' ACCOUNT UNLOCK CONTAINER=ALL';
 END;
 /
+alter session set container=ORCLPDB1;
+create user usage identified by "PaSsw0rd";
+grant connect, resource, dba, unlimited tablespace to usage;
 exit;
 EOF
 HERE
 sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
 sudo firewall-cmd --reload
+#Setup packages
+sudo yum install -y git
+sudo yum install -y python3
+sudo pip3 install oci oci-cli cx_Oracle requests
+sudo yum install -y oracle-release-el7
+sudo yum install -y oracle-instantclient18.3-basic.x86_64  oracle-instantclient18.3-sqlplus.x86_64
+
+mkdir $HOME/.oci
+
+git clone https://github.com/oracle/oci-python-sdk.git
+
