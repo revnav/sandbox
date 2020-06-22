@@ -4,10 +4,10 @@
 
 ##Requirements
 
-## First set the environment. cen2020.env file contains the "cen2020" OCI tenancy information. Please make sure update this .env file suitable
-## to your OCI tenancy.
+## First set the environment. cen2020.env file contains the "cen2020" OCI tenancy information. Please make sure update this .env file suitable to your OCI tenancy.
 ## make sure ~/.oci/config file contains the connection information for the tenancy you are deploying
 
+## Source the env
 . ./cen2020.env
 
 ## Deploy the db machine.
