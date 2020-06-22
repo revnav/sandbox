@@ -1,0 +1,65 @@
+#!/bin/bash
+## Refer Apex install here - https://oracle-base.com/articles/misc/oracle-application-express-apex-installation#installation
+cd /opt/oracle/
+sudo curl -O https://objectstorage.us-ashburn-1.oraclecloud.com/n/id3nodyt06el/b/testpublic/o/apex_20.1_en.zip
+sudo unzip -o apex_20.1_en.zip
+sudo chown -R oracle.oinstall /opt/oracle/apex
+
+#Create the home directory for Oracle
+sudo mkdir /home/oracle
+sudo chown -R oracle.oinstall /home/oracle
+
+sudo su - oracle <<HERE
+export ORACLE_SID=ORCLCDB
+export ORAENV_ASK=NO
+. oraenv
+cd /opt/oracle/apex
+sqlplus -s /nolog << EOF
+conn / as sysdba
+alter system set sga_max_size=4g scope=spfile;
+alter system set sga_target=4g scope=spfile;
+shutdown immediate
+startup
+alter session set container=ORCLPDB1;
+alter database ORCLPDB1 open;
+CREATE TABLESPACE APEX DATAFILE '/opt/oracle/oradata/ORCLCDB/apex_ORCLPDB1.dbf' SIZE 100M AUTOEXTEND ON NEXT 1M;
+spool /tmp/apex_install.log
+
+@/opt/oracle/apex/apexins.sql APEX APEX TEMP /i/
+
+REM Finished Apex Install
+
+BEGIN
+    APEX_UTIL.set_security_group_id( 10 );
+    
+    APEX_UTIL.create_user(
+        p_user_name       => 'ADMIN',
+        p_email_address   => 'navdeep.saini@centroid.com',
+        p_web_password    => 'Centroid#123',
+        p_developer_privs => 'ADMIN' );
+        
+    APEX_UTIL.set_security_group_id( null );
+    COMMIT;
+END;
+/
+
+@apex_rest_config.sql Centroid#123 Centroid#123
+@apex_epg_config.sql /opt/oracle
+
+EXEC DBMS_XDB.sethttpport(8080);
+
+conn / as sysdba
+
+DECLARE
+  l_passwd VARCHAR2(40);
+BEGIN
+  l_passwd := DBMS_RANDOM.string('a',10) || DBMS_RANDOM.string('x',10) || '1#';
+  -- Remove CONTAINER=ALL for non-CDB environments.
+  EXECUTE IMMEDIATE 'ALTER USER anonymous IDENTIFIED BY ' || l_passwd || ' ACCOUNT UNLOCK CONTAINER=ALL';
+END;
+/
+exit;
+EOF
+HERE
+sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
+sudo firewall-cmd --reload

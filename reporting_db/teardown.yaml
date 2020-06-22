@@ -1,0 +1,8 @@
+- name: Terminate the instance
+  hosts: localhost
+
+  tasks:
+   - name: Give Instance Information and Terminate it
+     oci_instance:
+       id: "{{ instance_id }}"
+       state: absent

@@ -14,6 +14,7 @@
     volume_size: "{{ lookup('env', 'VOLUME_SIZE') }}"
     private_ip_add: "{{ lookup('env', 'PRIVATE_IP') }}"
     pvt_key_path: "{{ lookup('env', 'PVT_KEY_PATH') }}"
+    boot_vol_sz: "{{ lookup('env', 'boot_vol_size') }}"
 
   tasks:
     - name: Launch a Compute Instance
@@ -28,6 +29,7 @@
         source_details:
                 source_type: image
                 image_id: "{{ instance_image }}"
+                boot_volume_size_in_gbs: 500
         vnic:
             assign_public_ip: True
             hostname_label: "{{ instance_hostname }}"
