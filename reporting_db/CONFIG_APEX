@@ -59,7 +59,7 @@ BEGIN
 END;
 /
 alter session set container=ORCLPDB1;
-create user usage identified by "PaSsw0rd";
+create user usage identified by "PaSsw0rd2";
 grant connect, resource, dba, unlimited tablespace to usage;
 exit;
 EOF
