@@ -1073,8 +1073,7 @@ class OCIInventory:
             )
             instances = list_all_resources(
                 target_fn=list_service,
-                compartment_id=compartment_ocid,
-                lifecycle_state="AVAILABLE",
+                compartment_id=compartment_ocid
             )
             self.log(
                 "All RUNNING instances from compartment {0}:{1}".format(

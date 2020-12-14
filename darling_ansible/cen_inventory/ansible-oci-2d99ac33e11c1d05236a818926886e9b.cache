@@ -1,0 +1,399 @@
+{
+  "Oracle-Tags#CreatedBy=navdeep.saini_centroid.com_": {
+    "hosts": [
+      "us-ashburn-1_DbSystemSummary"
+    ]
+  }, 
+  "Oracle-Tags#CreatedBy=oracleidentitycloudservice_navdeep.saini_centroid.com_": {
+    "hosts": [
+      "132.145.209.234", 
+      "150.136.84.44", 
+      "us-ashburn-1_AutonomousDataWarehouseSummary", 
+      "us-ashburn-1_AutonomousDatabaseSummary"
+    ]
+  }, 
+  "Oracle-Tags#CreatedOn=2020-05-20T01_18_12.572Z": {
+    "hosts": [
+      "us-ashburn-1_AutonomousDataWarehouseSummary", 
+      "us-ashburn-1_AutonomousDatabaseSummary"
+    ]
+  }, 
+  "Oracle-Tags#CreatedOn=2020-06-11T02_32_35.578Z": {
+    "hosts": [
+      "132.145.209.234"
+    ]
+  }, 
+  "Oracle-Tags#CreatedOn=2020-06-11T04_00_04.680Z": {
+    "hosts": [
+      "us-ashburn-1_DbSystemSummary"
+    ]
+  }, 
+  "Oracle-Tags#CreatedOn=2020-06-22T04_02_27.755Z": {
+    "hosts": [
+      "150.136.84.44"
+    ]
+  }, 
+  "QHNs_US-ASHBURN-AD-1": {
+    "children": [
+      "ocid1.subnet.oc1.iad.aaaaaaaaqaoe65e5df7sjub3sonw3fj7bibrvttcebhucgwdvihfttcyfbfq"
+    ], 
+    "hosts": [
+      "132.145.209.234", 
+      "150.136.84.44", 
+      "us-ashburn-1_DbSystemSummary"
+    ]
+  }, 
+  "VM.Standard2.1": {
+    "hosts": [
+      "132.145.209.234"
+    ]
+  }, 
+  "VM.Standard2.2": {
+    "hosts": [
+      "us-ashburn-1_DbSystemSummary"
+    ]
+  }, 
+  "VM.Standard2.4": {
+    "hosts": [
+      "150.136.84.44"
+    ]
+  }, 
+  "_meta": {
+    "hostvars": {
+      "132.145.209.234": {
+        "agent_config": {
+          "is_management_disabled": false, 
+          "is_monitoring_disabled": false
+        }, 
+        "availability_domain": "QHNs:US-ASHBURN-AD-1", 
+        "compartment_id": "ocid1.compartment.oc1..aaaaaaaawgol7adxtveix2axrpvxiclfbr7t5l664gdgpopgcfhp4pq2gizq", 
+        "dedicated_vm_host_id": null, 
+        "defined_tags": {
+          "Oracle-Tags": {
+            "CreatedBy": "oracleidentitycloudservice/navdeep.saini@centroid.com ", 
+            "CreatedOn": "2020-06-11T02:32:35.578Z"
+          }, 
+          "costTracking": {
+            "costcenter": "centroid_reporting_tool"
+          }
+        }, 
+        "display_name": "ebscm", 
+        "extended_metadata": {}, 
+        "fault_domain": "FAULT-DOMAIN-1", 
+        "freeform_tags": {}, 
+        "id": "ocid1.instance.oc1.iad.anuwcljt6rfcedyc72zulrld4vfzxftep7bqmux4vvo2nycstxe3pevukayq", 
+        "image_id": "ocid1.image.oc1..aaaaaaaavc5c67edi65ybyukvmoxctqtr35fwheubv2wtku3doodgx2v3lna", 
+        "ipxe_script": null, 
+        "launch_mode": "NATIVE", 
+        "launch_options": {
+          "boot_volume_type": "PARAVIRTUALIZED", 
+          "firmware": "UEFI_64", 
+          "is_consistent_volume_naming_enabled": true, 
+          "is_pv_encryption_in_transit_enabled": false, 
+          "network_type": "VFIO", 
+          "remote_data_volume_type": "PARAVIRTUALIZED"
+        }, 
+        "lifecycle_state": "RUNNING", 
+        "metadata": {
+          "ssh_authorized_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCo7+nh0CK0esh5B8jvPYVTrozV/YcmkTUgi867W2pd5zHad/W1RMqcc6PC5qBAlZL9SlQ7dHYuws4Zxqp4CMt+YEZnKftkOW/oa3XER2esI04OiuVA7qcd17JuT597uOXDVVpaqxiLxUC5YSO2NoD/8filWnRFhI2ir5H2VEjs8r0tqvcPMQly2eAW9mHgLmP5dicDRnYHNuT/y6vZbJhWfuV3xZx9TquRM6i6xlCgDkdc/xWIJ1YJGwiyhJQFElP6KGQp4Ts9nyEcUTEy5hAkySPHjCS0tIGVJo9acjRlAlfmdIsQHf/gEYiyn8CMSrc+w10FudJV4xmxOWOTWRgz"
+        }, 
+        "region": "iad", 
+        "shape": "VM.Standard2.1", 
+        "shape_config": {
+          "gpu_description": null, 
+          "gpus": 0, 
+          "local_disk_description": null, 
+          "local_disks": 0, 
+          "local_disks_total_size_in_gbs": null, 
+          "max_vnic_attachments": 2, 
+          "memory_in_gbs": 15.0, 
+          "networking_bandwidth_in_gbps": 1.0, 
+          "ocpus": 1.0, 
+          "processor_description": "2.0 GHz Intel\u00ae Xeon\u00ae Platinum 8167M (Skylake)"
+        }, 
+        "source_details": {
+          "boot_volume_size_in_gbs": null, 
+          "image_id": "ocid1.image.oc1..aaaaaaaavc5c67edi65ybyukvmoxctqtr35fwheubv2wtku3doodgx2v3lna", 
+          "kms_key_id": null, 
+          "source_type": "image"
+        }, 
+        "system_tags": {}, 
+        "time_created": "2020-06-11T02:32:37.185000+00:00", 
+        "time_maintenance_reboot_due": null
+      }, 
+      "150.136.84.44": {
+        "agent_config": {
+          "is_management_disabled": false, 
+          "is_monitoring_disabled": false
+        }, 
+        "availability_domain": "QHNs:US-ASHBURN-AD-1", 
+        "compartment_id": "ocid1.compartment.oc1..aaaaaaaawgol7adxtveix2axrpvxiclfbr7t5l664gdgpopgcfhp4pq2gizq", 
+        "dedicated_vm_host_id": null, 
+        "defined_tags": {
+          "Oracle-Tags": {
+            "CreatedBy": "oracleidentitycloudservice/navdeep.saini@centroid.com ", 
+            "CreatedOn": "2020-06-22T04:02:27.755Z"
+          }, 
+          "costTracking": {
+            "costcenter": "centroid_reporting_tool"
+          }
+        }, 
+        "display_name": "reportingDB", 
+        "extended_metadata": {}, 
+        "fault_domain": "FAULT-DOMAIN-1", 
+        "freeform_tags": {}, 
+        "id": "ocid1.instance.oc1.iad.anuwcljt6rfcedyco36ccshuqvmqz7xaxdkstwqozxxlsfi66cujler23hua", 
+        "image_id": "ocid1.image.oc1.iad.aaaaaaaahjkmmew2pjrcpylaf6zdddtom6xjnazwptervti35keqd4fdylca", 
+        "ipxe_script": null, 
+        "launch_mode": "NATIVE", 
+        "launch_options": {
+          "boot_volume_type": "PARAVIRTUALIZED", 
+          "firmware": "UEFI_64", 
+          "is_consistent_volume_naming_enabled": true, 
+          "is_pv_encryption_in_transit_enabled": false, 
+          "network_type": "PARAVIRTUALIZED", 
+          "remote_data_volume_type": "PARAVIRTUALIZED"
+        }, 
+        "lifecycle_state": "RUNNING", 
+        "metadata": {
+          "ssh_authorized_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCo7+nh0CK0esh5B8jvPYVTrozV/YcmkTUgi867W2pd5zHad/W1RMqcc6PC5qBAlZL9SlQ7dHYuws4Zxqp4CMt+YEZnKftkOW/oa3XER2esI04OiuVA7qcd17JuT597uOXDVVpaqxiLxUC5YSO2NoD/8filWnRFhI2ir5H2VEjs8r0tqvcPMQly2eAW9mHgLmP5dicDRnYHNuT/y6vZbJhWfuV3xZx9TquRM6i6xlCgDkdc/xWIJ1YJGwiyhJQFElP6KGQp4Ts9nyEcUTEy5hAkySPHjCS0tIGVJo9acjRlAlfmdIsQHf/gEYiyn8CMSrc+w10FudJV4xmxOWOTWRgz"
+        }, 
+        "region": "iad", 
+        "shape": "VM.Standard2.4", 
+        "shape_config": {
+          "gpu_description": null, 
+          "gpus": 0, 
+          "local_disk_description": null, 
+          "local_disks": 0, 
+          "local_disks_total_size_in_gbs": null, 
+          "max_vnic_attachments": 4, 
+          "memory_in_gbs": 60.0, 
+          "networking_bandwidth_in_gbps": 4.1, 
+          "ocpus": 4.0, 
+          "processor_description": "2.0 GHz Intel\u00ae Xeon\u00ae Platinum 8167M (Skylake)"
+        }, 
+        "source_details": {
+          "boot_volume_size_in_gbs": null, 
+          "image_id": "ocid1.image.oc1.iad.aaaaaaaahjkmmew2pjrcpylaf6zdddtom6xjnazwptervti35keqd4fdylca", 
+          "kms_key_id": null, 
+          "source_type": "image"
+        }, 
+        "system_tags": {}, 
+        "time_created": "2020-06-22T04:02:28.742000+00:00", 
+        "time_maintenance_reboot_due": null
+      }, 
+      "us-ashburn-1_AutonomousDataWarehouseSummary": {
+        "compartment_id": "ocid1.compartment.oc1..aaaaaaaawgol7adxtveix2axrpvxiclfbr7t5l664gdgpopgcfhp4pq2gizq", 
+        "connection_strings": null, 
+        "cpu_core_count": 1, 
+        "data_storage_size_in_tbs": 1, 
+        "db_name": "usageADW", 
+        "db_version": "19c", 
+        "defined_tags": {
+          "Oracle-Tags": {
+            "CreatedBy": "oracleidentitycloudservice/navdeep.saini@centroid.com ", 
+            "CreatedOn": "2020-05-20T01:18:12.572Z"
+          }, 
+          "costTracking": {
+            "costcenter": "centroid_reporting_tool"
+          }
+        }, 
+        "display_name": "usageADW", 
+        "freeform_tags": {}, 
+        "id": "ocid1.autonomousdatabase.oc1.iad.abuwcljr62tgspfxgo2j7ad4lg5vt7dgpjwsndqlaesl2n43y67fmnwqgwna", 
+        "license_model": "BRING_YOUR_OWN_LICENSE", 
+        "lifecycle_details": null, 
+        "lifecycle_state": "STOPPED", 
+        "service_console_url": "https://adb.us-ashburn-1.oraclecloud.com/console/index.html?tenant_name=OCID1.TENANCY.OC1..AAAAAAAACR2KIMUI4S25CK7ZEYJRQVFC3BPYJLR73HJRYDGUKZWCWQCTBQRA&database_name=USAGEADW&service_type=ADW", 
+        "time_created": "2020-05-20T01:18:12.578000+00:00"
+      }, 
+      "us-ashburn-1_AutonomousDatabaseSummary": {
+        "autonomous_container_database_id": null, 
+        "available_upgrade_versions": [], 
+        "compartment_id": "ocid1.compartment.oc1..aaaaaaaawgol7adxtveix2axrpvxiclfbr7t5l664gdgpopgcfhp4pq2gizq", 
+        "connection_strings": {
+          "all_connection_strings": {
+            "HIGH": "adb.us-ashburn-1.oraclecloud.com:1522/swp3v0xywddfg1r_usageadw_high.adwc.oraclecloud.com", 
+            "LOW": "adb.us-ashburn-1.oraclecloud.com:1522/swp3v0xywddfg1r_usageadw_low.adwc.oraclecloud.com", 
+            "MEDIUM": "adb.us-ashburn-1.oraclecloud.com:1522/swp3v0xywddfg1r_usageadw_medium.adwc.oraclecloud.com"
+          }, 
+          "dedicated": null, 
+          "high": "adb.us-ashburn-1.oraclecloud.com:1522/swp3v0xywddfg1r_usageadw_high.adwc.oraclecloud.com", 
+          "low": "adb.us-ashburn-1.oraclecloud.com:1522/swp3v0xywddfg1r_usageadw_low.adwc.oraclecloud.com", 
+          "medium": "adb.us-ashburn-1.oraclecloud.com:1522/swp3v0xywddfg1r_usageadw_medium.adwc.oraclecloud.com"
+        }, 
+        "connection_urls": {
+          "apex_url": "https://SWP3V0XYWDDFG1R-USAGEADW.adb.us-ashburn-1.oraclecloudapps.com/ords/apex", 
+          "machine_learning_user_management_url": "https://adb.us-ashburn-1.oraclecloud.com/omlusers/tenants/OCID1.TENANCY.OC1..AAAAAAAACR2KIMUI4S25CK7ZEYJRQVFC3BPYJLR73HJRYDGUKZWCWQCTBQRA/databases/USAGEADW/index.html", 
+          "sql_dev_web_url": "https://SWP3V0XYWDDFG1R-USAGEADW.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/_sdw/?nav=worksheet"
+        }, 
+        "cpu_core_count": 1, 
+        "data_safe_status": "NOT_REGISTERED", 
+        "data_storage_size_in_tbs": 1, 
+        "db_name": "usageADW", 
+        "db_version": "19c", 
+        "db_workload": "DW", 
+        "defined_tags": {
+          "Oracle-Tags": {
+            "CreatedBy": "oracleidentitycloudservice/navdeep.saini@centroid.com ", 
+            "CreatedOn": "2020-05-20T01:18:12.572Z"
+          }, 
+          "costTracking": {
+            "costcenter": "centroid_reporting_tool"
+          }
+        }, 
+        "display_name": "usageADW", 
+        "freeform_tags": {}, 
+        "id": "ocid1.autonomousdatabase.oc1.iad.abuwcljr62tgspfxgo2j7ad4lg5vt7dgpjwsndqlaesl2n43y67fmnwqgwna", 
+        "is_auto_scaling_enabled": true, 
+        "is_dedicated": false, 
+        "is_free_tier": false, 
+        "is_preview": false, 
+        "license_model": "BRING_YOUR_OWN_LICENSE", 
+        "lifecycle_details": null, 
+        "lifecycle_state": "STOPPED", 
+        "nsg_ids": null, 
+        "private_endpoint": null, 
+        "private_endpoint_ip": null, 
+        "private_endpoint_label": null, 
+        "service_console_url": "https://adb.us-ashburn-1.oraclecloud.com/console/index.html?tenant_name=OCID1.TENANCY.OC1..AAAAAAAACR2KIMUI4S25CK7ZEYJRQVFC3BPYJLR73HJRYDGUKZWCWQCTBQRA&database_name=USAGEADW&service_type=ADW", 
+        "subnet_id": null, 
+        "system_tags": {}, 
+        "time_created": "2020-05-20T01:18:12.578000+00:00", 
+        "time_deletion_of_free_autonomous_database": null, 
+        "time_maintenance_begin": "2020-06-28T02:35:00+00:00", 
+        "time_maintenance_end": "2020-06-28T10:35:00+00:00", 
+        "time_reclamation_of_free_autonomous_database": null, 
+        "used_data_storage_size_in_tbs": 1, 
+        "whitelisted_ips": null
+      }, 
+      "us-ashburn-1_DbSystemSummary": {
+        "availability_domain": "QHNs:US-ASHBURN-AD-1", 
+        "backup_network_nsg_ids": null, 
+        "backup_subnet_id": null, 
+        "cluster_name": null, 
+        "compartment_id": "ocid1.compartment.oc1..aaaaaaaawgol7adxtveix2axrpvxiclfbr7t5l664gdgpopgcfhp4pq2gizq", 
+        "cpu_core_count": 2, 
+        "data_storage_percentage": 80, 
+        "data_storage_size_in_gbs": 512, 
+        "database_edition": "ENTERPRISE_EDITION", 
+        "db_system_options": {
+          "storage_management": "ASM"
+        }, 
+        "defined_tags": {
+          "Oracle-Tags": {
+            "CreatedBy": "navdeep.saini@centroid.com ", 
+            "CreatedOn": "2020-06-11T04:00:04.680Z"
+          }, 
+          "costTracking": {
+            "costcenter": "centroid_reporting_tool"
+          }
+        }, 
+        "disk_redundancy": "HIGH", 
+        "display_name": "ebsdemo", 
+        "domain": "ebsdemodb1.vcn.oraclevcn.com", 
+        "fault_domains": [
+          "FAULT-DOMAIN-2"
+        ], 
+        "freeform_tags": {}, 
+        "hostname": "ebsdemodb", 
+        "id": "ocid1.dbsystem.oc1.iad.abuwcljtmduwpug5l6nlmincmbrfehjii6uiuqnujmwbmll3ypdjl2erak6q", 
+        "last_maintenance_run_id": null, 
+        "last_patch_history_entry_id": null, 
+        "license_model": "BRING_YOUR_OWN_LICENSE", 
+        "lifecycle_details": null, 
+        "lifecycle_state": "AVAILABLE", 
+        "listener_port": 1521, 
+        "maintenance_window": null, 
+        "next_maintenance_run_id": null, 
+        "node_count": 1, 
+        "nsg_ids": null, 
+        "reco_storage_size_in_gb": 256, 
+        "scan_dns_record_id": "ocid1.vcndnsrecord.oc1.iad.abuwcljthrudcerskvpmtp3eispadaal4rkfpbczp7fnnmbjmjzhamivoqeq", 
+        "scan_ip_ids": null, 
+        "shape": "VM.Standard2.2", 
+        "sparse_diskgroup": null, 
+        "ssh_public_keys": [
+          "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCsSt67ws4Ax/LmYuO1HKsePWul3WbTX/Ky0NhDdWIxofaohWCgnhMP94aXn28M9ITUVJZ7zPdszYDcfIFpEm13qPL+p8Vhqv0xVSnyfu5XcHU3eSa3GwRlYIiuGDZQ68i0NFYF4HKB0ivlzh0C5UBcpaABxKDDGRyocM2P/XuiC3sl5Xl6nuykyXevRtIjispt0GYY20sIufl6CrI/MpHrzAjo4Sa0nYp2OComMqIOwfiGTGYw9AAGT0zrDlIxNvHRqg/fXz/3VEICVlCuzP268aDEQl8KSjZAFSCdBE0dphxxzbdsu1fFKAyeP0P46YKUn6OgyuxIFn9lIQ7YWOSZ oracle@ebscm-621701"
+        ], 
+        "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaaex6kbgmgmsskqntpyvhihnolz4rihaao2ci5s6kjipmy2k7hpzha", 
+        "time_created": "2020-06-11T04:00:05.417000+00:00", 
+        "time_zone": "UTC", 
+        "version": "19.6.0.0.0", 
+        "vip_ids": null
+      }
+    }
+  }, 
+  "all": {
+    "hosts": [
+      "132.145.209.234", 
+      "150.136.84.44", 
+      "us-ashburn-1_AutonomousDataWarehouseSummary", 
+      "us-ashburn-1_AutonomousDatabaseSummary", 
+      "us-ashburn-1_DbSystemSummary"
+    ], 
+    "vars": {}
+  }, 
+  "centroid_reporting": {
+    "hosts": [
+      "132.145.209.234", 
+      "150.136.84.44", 
+      "us-ashburn-1_AutonomousDataWarehouseSummary", 
+      "us-ashburn-1_AutonomousDatabaseSummary", 
+      "us-ashburn-1_DbSystemSummary"
+    ]
+  }, 
+  "costTracking#costcenter=centroid_reporting_tool": {
+    "hosts": [
+      "132.145.209.234", 
+      "150.136.84.44", 
+      "us-ashburn-1_AutonomousDataWarehouseSummary", 
+      "us-ashburn-1_AutonomousDatabaseSummary", 
+      "us-ashburn-1_DbSystemSummary"
+    ]
+  }, 
+  "ocid1.image.oc1..aaaaaaaavc5c67edi65ybyukvmoxctqtr35fwheubv2wtku3doodgx2v3lna": {
+    "hosts": [
+      "132.145.209.234"
+    ]
+  }, 
+  "ocid1.image.oc1.iad.aaaaaaaahjkmmew2pjrcpylaf6zdddtom6xjnazwptervti35keqd4fdylca": {
+    "hosts": [
+      "150.136.84.44"
+    ]
+  }, 
+  "ocid1.securitylist.oc1.iad.aaaaaaaamwyicritklfjpryn3hsn7jngao3ezulqomd2vfhpaunoy5nbgbka": {
+    "hosts": [
+      "132.145.209.234", 
+      "150.136.84.44"
+    ]
+  }, 
+  "ocid1.subnet.oc1.iad.aaaaaaaaqaoe65e5df7sjub3sonw3fj7bibrvttcebhucgwdvihfttcyfbfq": {
+    "hosts": [
+      "132.145.209.234", 
+      "150.136.84.44"
+    ]
+  }, 
+  "ocid1.vcn.oc1.iad.amaaaaaa6rfcedyanxqn7zohd6tnjohkhaao6fnlr5sghwq6bpuavtidmj2a": {
+    "children": [
+      "ocid1.subnet.oc1.iad.aaaaaaaaqaoe65e5df7sjub3sonw3fj7bibrvttcebhucgwdvihfttcyfbfq"
+    ], 
+    "hosts": [
+      "132.145.209.234", 
+      "150.136.84.44"
+    ]
+  }, 
+  "region_iad": {
+    "children": [
+      "QHNs_US-ASHBURN-AD-1", 
+      "ocid1.vcn.oc1.iad.amaaaaaa6rfcedyanxqn7zohd6tnjohkhaao6fnlr5sghwq6bpuavtidmj2a"
+    ], 
+    "hosts": [
+      "132.145.209.234", 
+      "150.136.84.44", 
+      "us-ashburn-1_AutonomousDataWarehouseSummary", 
+      "us-ashburn-1_AutonomousDatabaseSummary", 
+      "us-ashburn-1_DbSystemSummary"
+    ]
+  }
+}
