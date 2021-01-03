@@ -33,16 +33,6 @@ def increase_bv_vpus (boot_vol_id):
     return "The vpus of boot_vol {} is updated to Higher Performance".format(boot_vol_id)
 
 def handler(ctx, data: io.BytesIO=None):
-    alarm_msg = {}
-    message_id = func_response = ""
-    try:
-        headers = ctx.Headers()
-        message_id = headers["x-oci-ns-messageid"]
-    except Exception as ex:
-        print('ERROR: Missing Message ID in the header', ex, flush=True)
-        raise
-    print("INFO: Message ID = ", message_id, flush=True)
-    # the Message Id can be stored in a database and be used to check for duplicate messages
     try:
         alarm_msg = json.loads(data.getvalue())
         print("INFO: Alarm message: ")
