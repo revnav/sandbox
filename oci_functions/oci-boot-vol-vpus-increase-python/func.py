@@ -15,10 +15,7 @@ def increase_bv_vpus (boot_vol_id):
     signer = oci.auth.signers.get_resource_principals_signer()
     block_storage_client = oci.core.BlockstorageClient(config={}, signer=signer)
     current_vpus = block_storage_client.get_boot_volume(boot_vol_id).data.vpus_per_gb
-
-
-    print("INFO: current vpus for boot_vol {0}: {1}".format(boot_vol_id,vpus_per_gb), flush=True)
-
+    print("INFO: current vpus for boot_vol {0}: {1}".format(boot_vol_id,current_vpus), flush=True)
     if current_vpus != 20:
         return "Current Boot vol is already high performance"
     # improve the logic below to handle more scenarios, make sure the shapes you select are available in the region and AD
