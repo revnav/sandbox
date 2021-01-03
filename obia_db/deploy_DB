@@ -1,0 +1,7 @@
+scp  -o "StrictHostKeyChecking=no" -i $PVT_KEY_PATH ./INSTALL_DB opc@$1:/tmp/.
+scp  -o "StrictHostKeyChecking=no" -i $PVT_KEY_PATH ./CONFIG_DB opc@$1:/tmp/.
+ssh  -o "StrictHostKeyChecking=no" -i $PVT_KEY_PATH  opc@$1 chmod 777 /tmp/CONFIG_DB
+ssh  -o "StrictHostKeyChecking=no" -i $PVT_KEY_PATH  opc@$1 chmod 777 /tmp/INSTALL_DB
+ssh  -o "StrictHostKeyChecking=no" -i $PVT_KEY_PATH  opc@$1 /tmp/CONFIG_DB
+ssh  -o "StrictHostKeyChecking=no" -i $PVT_KEY_PATH  opc@$1 rm /tmp/CONFIG_DB /tmp/INSTALL_DB
+exit

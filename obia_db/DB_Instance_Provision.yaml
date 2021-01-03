@@ -1,0 +1,66 @@
+---
+# Create Instance in OCI
+
+- name: Launch a compute instance and connect to it using SSH
+  hosts: localhost
+  vars:
+    instance_subnet_id: "{{ lookup('env', 'SUBNET_OCID') }}"
+    instance_shape: "{{ lookup('env', 'INSTANCE_SHAPE') | default('VM.Standard2.1', true) }}"
+    instance_hostname: "{{ lookup('env', 'HOSTNAME') }}"
+    instance_ad: "{{ lookup('env', 'INSTANCE_AD') }}"
+    instance_compartment: "{{ lookup('env', 'COMPARTMENT_OCID') }}"
+    instance_image: "{{ lookup('env', 'INSTANCE_IMAGE') }}"
+    volume_name: "{{ lookup('env', 'VOLUME_NAME') }}"
+    volume_size: "{{ lookup('env', 'VOLUME_SIZE') }}"
+    private_ip_add: "{{ lookup('env', 'PRIVATE_IP') }}"
+    pvt_key_path: "{{ lookup('env', 'PVT_KEY_PATH') }}"
+    boot_vol_sz: "{{ lookup('env', 'boot_vol_size') }}"
+
+  tasks:
+    - name: Launch a Compute Instance
+      oci_instance:
+        #name: VMNAEBSAPP01
+        name:  "{{ instance_hostname }}"
+        availability_domain: "{{ instance_ad }}"
+        compartment_id: "{{ instance_compartment }}"
+        shape: "{{ instance_shape }}"
+        metadata:
+                ssh_authorized_keys: "{{ lookup('file', 'ssh_public_key' ) }}"
+        source_details:
+                source_type: image
+                image_id: "{{ instance_image }}"
+                boot_volume_size_in_gbs: 500
+        vnic:
+            assign_public_ip: True
+            hostname_label: "{{ instance_hostname }}"
+#            private_ip: "{{ private_ip_add }}"
+            subnet_id: "{{ instance_subnet_id }}"
+      register: result
+
+    - name: Print instance details
+      debug:
+        msg: "{{ result }}"
+    - set_fact:
+        instance_id: "{{result.instance.id }}"
+        public_ip: "{{result.instance.primary_public_ip }}"
+        private_ip: "{{result.instance.primary_private_ip }}"
+
+    - name: Wait for port 22 to open
+      wait_for:
+        port: 22
+        host: '{{ public_ip }}'
+        state: started
+        delay: 10
+
+    - name: connect to instance
+      command: ssh -o "UserKnownHostsFile=/dev/null" -o "StrictHostKeyChecking=no" -i {{ pvt_key_path }} opc@{{ public_ip }} uname -a
+
+    - name: deploy DB
+      command: sh ./deploy_DB {{ public_ip }}
+
+
+
+#    - name: Terminate/delete an instance
+#      oci_instance:
+#        id: "{ { instance_id } }"
+#        state: "absent"

@@ -1,0 +1,9 @@
+cd /tmp
+#curl -O https://objectstorage.us-ashburn-1.oraclecloud.com/p/fPGDugLih4dOsm6aKeJwaEI1BTII8y_riYaAp6m8kCM/n/id3nodyt06el/b/testpublic/o/oracle-database-ee-18c-1.0-1.x86_64.rpm
+#yum -y localinstall /tmp/oracle-database-ee-18c-1.0-1.x86_64.rpm
+#/etc/init.d/oracledb_ORCLCDB-18c configure
+
+curl -O https://objectstorage.us-ashburn-1.oraclecloud.com/p/cSnjcvu0m_BL14ulvf62-_RQjsavlO2hLrCId3jq8TLyCaCGQiPoQS_uWzJSgwWF/n/id3nodyt06el/b/testpublic/o/oracle-database-ee-19c-1.0-1.x86_64.rpm
+yum -y install oracle-database-preinstall-19c
+yum -y localinstall /tmp/oracle-database-ee-19c-1.0-1.x86_64.rpm
+/etc/init.d/oracledb_ORCLCDB-19c configure
