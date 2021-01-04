@@ -16,7 +16,7 @@ def increase_bv_vpus (boot_vol_id):
     block_storage_client = oci.core.BlockstorageClient(config={}, signer=signer)
     current_vpus = block_storage_client.get_boot_volume(boot_vol_id).data.vpus_per_gb
     if current_vpus == "20":
-        return "Boot Vol already at higher performamnce, vpus for boot_vol {0}: {1}".format(boot_vol_id,current_vpus)"
+        return "Boot Vol already at higher performamnce, vpus for boot_vol {0}: {1}".format(boot_vol_id,current_vpus)
     else:
         print("INFO: current vpus for boot_vol {0}: {1}".format(boot_vol_id,current_vpus), flush=True)
     try:
