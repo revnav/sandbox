@@ -22,12 +22,13 @@ def increase_bv_vpus (boot_vol_id):
             update_boot_volume_details = oci.core.models.UpdateBootVolumeDetails(vpus_per_gb=20)
             resp = block_storage_client.update_boot_volume(boot_volume_id=boot_vol_id, update_boot_volume_details=update_boot_volume_details)
             print(resp, flush=True)
+        else:
+            print("ERROR: Boot Vol already at higher performamnce, vpus for boot_vol {0}: {1}".format(boot_vol_id,current_vpus), flush=True)
         except Exception as ex:
         print('ERROR: cannot update update_boot_volume {}'.format(boot_vol_id), flush=True)
         raise
         return "The vpus of boot_vol {} is updated to Higher Performance".format(boot_vol_id)
-    else:
-        print("INFO: Boot Vol already at higher performamnce, vpus for boot_vol {0}: {1}".format(boot_vol_id,current_vpus), flush=True)
+
 
 def handler(ctx, data: io.BytesIO=None):
     try:
