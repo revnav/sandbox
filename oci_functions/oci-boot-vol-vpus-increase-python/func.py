@@ -35,22 +35,22 @@ def handler(ctx, data: io.BytesIO=None):
     except (Exception, ValueError) as ex:
         print(str(ex), flush=True)
 
-if current_vpus != "20":
-    if alarm_msg["type"] == "OK_TO_FIRING":
-        if alarm_msg["alarmMetaData"][0]["dimensions"]:
-            alarm_metric_dimension = alarm_msg["alarmMetaData"][0]["dimensions"][0]   #assuming the first dimension matches the boot vol to resize
-            print("INFO: Boot Vol to resize: ", alarm_metric_dimension["resourceId"], flush=True)
-            func_response = increase_bv_vpus(alarm_metric_dimension["resourceId"])
-            print("INFO: ", func_response, flush=True)
+    if current_vpus != "20":
+        if alarm_msg["type"] == "OK_TO_FIRING":
+            if alarm_msg["alarmMetaData"][0]["dimensions"]:
+                alarm_metric_dimension = alarm_msg["alarmMetaData"][0]["dimensions"][0]   #assuming the first dimension matches the boot vol to resize
+                print("INFO: Boot Vol to resize: ", alarm_metric_dimension["resourceId"], flush=True)
+                func_response = increase_bv_vpus(alarm_metric_dimension["resourceId"])
+                print("INFO: ", func_response, flush=True)
+            else:
+                print('ERROR: There is no metric dimension in this alarm message', flush=True)
+                func_response = "There is no metric dimension in this alarm message"
         else:
-            print('ERROR: There is no metric dimension in this alarm message', flush=True)
-            func_response = "There is no metric dimension in this alarm message"
+            print('INFO: Nothing to do, alarm is not FIRING', flush=True)
+            func_response = "Nothing to do, alarm is not FIRING"
     else:
-        print('INFO: Nothing to do, alarm is not FIRING', flush=True)
-        func_response = "Nothing to do, alarm is not FIRING"
-else:
-    print("INFO: Boot Vol already at higher performamnce, vpus for boot_vol {0}: {1}".format(boot_vol_id,current_vpus), flush=True)
-    func_response = "Boot Vol already at higher performamnce"
+        print("INFO: Boot Vol already at higher performamnce, vpus for boot_vol {0}: {1}".format(boot_vol_id,current_vpus), flush=True)
+        func_response = "Boot Vol already at higher performamnce"
 
     return response.Response(
         ctx,
