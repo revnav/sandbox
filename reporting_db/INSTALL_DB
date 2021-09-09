@@ -1,4 +1,8 @@
 cd /tmp
-curl -O https://objectstorage.us-ashburn-1.oraclecloud.com/p/fPGDugLih4dOsm6aKeJwaEI1BTII8y_riYaAp6m8kCM/n/id3nodyt06el/b/testpublic/o/oracle-database-ee-18c-1.0-1.x86_64.rpm
+curl -O https://objectstorage.us-ashburn-1.oraclecloud.com/p/MQbcaxdP_neSS1hQgTLsMfbrIRq3-gF0MSbQWzeQR6f2Ip3QPy-h86sz7ugOrBQu/n/id3nodyt06el/b/testpublic/o/oracle-database-ee-18c-1.0-1.x86_64.rpm
 yum -y localinstall /tmp/oracle-database-ee-18c-1.0-1.x86_64.rpm
 /etc/init.d/oracledb_ORCLCDB-18c configure
+
+##https://objectstorage.us-ashburn-1.oraclecloud.com/p/I-A3tfFwnIv3VoyKtq35vgp0M0AZvHE3KhkG1eGnpEeB1ISzWc5Wb6SSZ_O78xOg/n/id3nodyt06el/b/testpublic/o/oracle-database-ee-19c-1.0-1.x86_64.rpm
+
+##https://objectstorage.us-ashburn-1.oraclecloud.com/p/MQbcaxdP_neSS1hQgTLsMfbrIRq3-gF0MSbQWzeQR6f2Ip3QPy-h86sz7ugOrBQu/n/id3nodyt06el/b/testpublic/o/oracle-database-ee-18c-1.0-1.x86_64.rpm
